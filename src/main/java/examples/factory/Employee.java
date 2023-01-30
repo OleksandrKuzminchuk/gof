@@ -1,5 +1,5 @@
 package examples.factory;
 
-public class Employee {
+public abstract class Employee {
     void makeJob() {}
 }

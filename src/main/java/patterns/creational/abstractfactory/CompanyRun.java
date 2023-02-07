@@ -1,6 +1,7 @@
 package patterns.creational.abstractfactory;
 
 import static patterns.creational.abstractfactory.TypeLanguage.EU;
+import static patterns.creational.abstractfactory.TypeLanguage.RU;
 
 public class CompanyRun {
     public static void main(String[] args) {

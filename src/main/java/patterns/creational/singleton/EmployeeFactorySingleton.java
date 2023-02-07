@@ -1,10 +1,17 @@
 package patterns.creational.singleton;
 
 public class EmployeeFactorySingleton {
-    private static final EmployeeFactorySingleton INSTANCE = new EmployeeFactorySingleton();
+    private static EmployeeFactorySingleton INSTANCE = null;
     private EmployeeFactorySingleton() {
     }
     public static EmployeeFactorySingleton getInstance(){
+        if (INSTANCE == null){
+            synchronized (EmployeeFactorySingleton.class){
+                if (INSTANCE == null){
+                    INSTANCE = new EmployeeFactorySingleton();
+                }
+            }
+        }
         return INSTANCE;
     }
 

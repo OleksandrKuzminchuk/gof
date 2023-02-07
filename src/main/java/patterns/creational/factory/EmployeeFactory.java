@@ -1,6 +1,6 @@
 package patterns.creational.factory;
 
-public class EmployeeFactory {
+public abstract class EmployeeFactory {
     private EmployeeFactory() {
         throw new IllegalStateException("Utility class");
     }

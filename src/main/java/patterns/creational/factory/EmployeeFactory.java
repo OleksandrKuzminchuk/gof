@@ -1,5 +1,15 @@
 package patterns.creational.factory;
 
-public interface EmployeeFactory {
-    Employee createEmployee();
+public class EmployeeFactory {
+    public static Employee getEmployeeByPosition(TypePosition position){
+        if (position.equals(TypePosition.LOADER)){
+            return new Loader();
+        } else if (position.equals(TypePosition.ACCOUNTANT)) {
+            return new Accountant();
+        } else if (position.equals(TypePosition.FORWARDER)) {
+            return new Forwarder();
+        } else {
+            throw new  RuntimeException("Can't create the position: " + position);
+        }
+    }
 }

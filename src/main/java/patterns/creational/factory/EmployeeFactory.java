@@ -1,6 +1,9 @@
 package patterns.creational.factory;
 
 public class EmployeeFactory {
+    private EmployeeFactory() {
+        throw new IllegalStateException("Utility class");
+    }
     public static Employee getEmployeeByPosition(TypePosition position){
         if (position.equals(TypePosition.LOADER)){
             return new Loader();
